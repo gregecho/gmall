@@ -31,7 +31,7 @@
 		<!--Spring library version -->
 		<spring.version>4.3.4.RELEASE</spring.version>
 		<!--Struts library version -->
-		<struts.version>1.3.8</struts.version>
+		<struts.version>2.5</struts.version>
 	</properties>
 
 	<dependencies>
@@ -65,7 +65,11 @@
 			<artifactId>spring-test</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aspects</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
 		<!--End Spring dependencies -->
 		<!-- Struts dependencies -->
 		<!-- https://mvnrepository.com/artifact/junit/junit -->
@@ -78,21 +82,28 @@
 		<!-- https://mvnrepository.com/artifact/org.apache.struts/struts2-core -->
 		<dependency>
 			<groupId>org.apache.struts</groupId>
-			<artifactId>struts-core</artifactId>
-			<version>${struts.version}</version>
+			<artifactId>struts2-core</artifactId>
+			<version>2.5.5</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.apache.struts/struts-taglib -->
 		<dependency>
 			<groupId>org.apache.struts</groupId>
 			<artifactId>struts-taglib</artifactId>
-			<version>${struts.version}</version>
+			<version>1.3.10</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.apache.struts/struts-extras -->
 		<dependency>
 			<groupId>org.apache.struts</groupId>
 			<artifactId>struts-extras</artifactId>
-			<version>${struts.version}</version>
+			<version>1.3.10</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.struts/struts2-spring-plugin -->
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-spring-plugin</artifactId>
+			<version>2.5.5</version>
+		</dependency>
+
 		<!--End Struts dependencies -->
 
 		<!-- MySQL database driver -->

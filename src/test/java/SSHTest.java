@@ -6,6 +6,11 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.greg.gmall.model.Category;
+import com.greg.gmall.service.CategoryService;
+import com.greg.gmall.service.imp.CategoryServiceImp;
 
 /**
  * @Description TODO(采用Spring的注解调试，仅仅支持Spring3.1及以上)
@@ -21,14 +26,24 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * http://stackoverflow.com/questions/10385452/location-of-spring-context-xml
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("/beans.xml")
+@ContextConfiguration("/SpringBeans.xml")
+//@ContextConfiguration(locations = "classpath:/SpringBeans.xml")
 public class SSHTest {
 
 	@Resource
 	private Date date;
-
-	@Test // 测试Spring IOC的开发环境
+	@Resource  
+    private CategoryService categoryService;
+	
+	@Test
 	public void springIoc() {
 		System.out.println(date);
 	}
+	
+	@Test
+	@Transactional
+    public void hihernate() {  
+        Category category = new Category("test", true);  
+        categoryService.save(category);  
+    }  
 }
