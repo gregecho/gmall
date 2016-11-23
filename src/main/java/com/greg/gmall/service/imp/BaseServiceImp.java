@@ -10,6 +10,9 @@ import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 
+import org.springframework.context.annotation.Lazy;
+import org.springframework.stereotype.Service;
+
 import com.greg.gmall.dao.BaseDao;
 import com.greg.gmall.dao.CategoryDao;
 import com.greg.gmall.service.BaseService;
@@ -19,6 +22,8 @@ import com.greg.gmall.service.BaseService;
  *
  */
 @SuppressWarnings("unchecked")
+@Service("baseService")
+@Lazy(true)
 public class BaseServiceImp<T> implements BaseService<T> {
 
 	private Class<T> persistentClass;

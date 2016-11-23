@@ -1,20 +1,25 @@
 package com.greg.gmall.action;
 
 
+import javax.annotation.Resource;
+
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Controller;
+
 import com.greg.gmall.model.Category;
 import com.greg.gmall.service.CategoryService;
 
+@Controller("categoryAction")
+@Scope("prototype")
 public class CategoryAction extends BaseAction<Category> {
 
 	private static final long serialVersionUID = -7833879077954727007L;
 
 	private Category category;
 
+	@Resource
 	private CategoryService categoryService;
 
-	public void setCategoryService(CategoryService categoryService) {
-		this.categoryService = categoryService;
-	}
 
 	public String update() {
 		System.out.println("----update----");
