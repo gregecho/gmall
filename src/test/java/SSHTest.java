@@ -10,7 +10,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.greg.gmall.model.Category;
 import com.greg.gmall.service.CategoryService;
-import com.greg.gmall.service.imp.CategoryServiceImp;
 
 /**
  * @Description TODO(采用Spring的注解调试，仅仅支持Spring3.1及以上)

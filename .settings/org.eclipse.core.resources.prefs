@@ -1,5 +1,8 @@
 eclipse.preferences.version=1
 encoding//src/main/java/com/greg/gmall/action/CategoryAction.java=UTF-8
+encoding//src/main/java/com/greg/gmall/dao/imp/BaseDaoImp.java=UTF-8
 encoding//src/main/java/com/greg/gmall/dao/imp/CategoryDaoImp.java=UTF-8
+encoding//src/main/java/com/greg/gmall/service/CategoryService.java=UTF-8
+encoding//src/main/java/com/greg/gmall/service/imp/BaseServiceImp.java=UTF-8
 encoding//src/main/java/com/greg/gmall/service/imp/CategoryServiceImp.java=UTF-8
 encoding//src/test/java/SSHTest.java=UTF-8

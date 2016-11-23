@@ -6,7 +6,12 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class CategoryAction extends ActionSupport {  
     
-    private Category category;//设置一个私有成员变量接收url带过来的参数，注意下面要写好get和set方法  
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -7833879077954727007L;
+
+	private Category category;//设置一个私有成员变量接收url带过来的参数，注意下面要写好get和set方法  
       
     private CategoryService categoryService;  
       
