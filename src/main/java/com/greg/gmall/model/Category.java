@@ -1,6 +1,10 @@
 package com.greg.gmall.model;
 
 public class Category implements java.io.Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -627236948764421438L;
 	private Integer id;
 	// private Account account;
 	private String type;
