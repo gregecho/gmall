@@ -7,9 +7,13 @@ import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.List;
 
+import javax.annotation.Resource;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.type.IntegerType;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.stereotype.Repository;
 
 import com.greg.gmall.dao.BaseDao;
 
@@ -18,6 +22,8 @@ import com.greg.gmall.dao.BaseDao;
  *
  */
 @SuppressWarnings("unchecked")
+@Repository("baseDao")
+@Lazy(true)
 public class BaseDaoImp<T> implements BaseDao<T> {
 
 	private Class<T> persistentClass;
@@ -34,12 +40,9 @@ public class BaseDaoImp<T> implements BaseDao<T> {
 	/*	this.persistentClass = (Class<T>) ((ParameterizedType) getClass().getGenericSuperclass())
 				.getActualTypeArguments()[0];*/
 	}
-
+	@Resource
 	private SessionFactory sessionFactory;
 
-	public void setSessionFactory(SessionFactory sessionFactory) {
-		this.sessionFactory = sessionFactory;
-	}
 
 	protected Session getSession() {
 		return sessionFactory.getCurrentSession();
