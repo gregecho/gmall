@@ -22,8 +22,7 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 		parent="baseDao" />
 
 
-	<bean id="categoryAction" class="com.greg.gmall.action.CategoryAction"
-		scope="prototype">
+	<bean id="categoryAction" class="com.greg.gmall.action.CategoryAction">
 		<property name="categoryService" ref="categoryService" />
 	</bean>
 </beans>

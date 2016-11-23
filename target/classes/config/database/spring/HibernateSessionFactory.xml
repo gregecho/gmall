@@ -43,15 +43,13 @@
 			<tx:method name="save*" propagation="REQUIRED" />
 			<tx:method name="update*" propagation="REQUIRED" />
 			<tx:method name="delete*" propagation="REQUIRED" />
-			<tx:method name="*" propagation="SUPPORTS" />
+			<!-- Do not add propagation="SUPPORTS". http://docs.spring.io/spring-framework/docs/4.2.x/spring-framework-reference/html/transaction.html -->
+			<tx:method name="*"/>
 		</tx:attributes>
 	</tx:advice>
 	<aop:config>
-		<!-- 配置哪些包的类要切入事务 -->
 		<aop:pointcut id="pointcut"
 			expression="execution(* com.greg.gmall.service.imp.*.*(..))" />
 		<aop:advisor advice-ref="advice" pointcut-ref="pointcut" />
-		<!-- 连接了上面的advice和上面的pointcut -->
-		<!-- 出现一个很奇怪的问题，aop:pointcut要写在aop:advisor上面，否则会报错 -->
 	</aop:config>
 </beans>
