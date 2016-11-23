@@ -14,8 +14,6 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 	<!-- Beans Declaration -->
 	<import resource="com/greg/gmall/spring/CategoryBean.xml" />
 	<bean id="date" class="java.util.Date" />
-	<bean id="categoryAction" class="com.greg.gmall.action.CategoryAction"
-		scope="prototype">
-		<property name="categoryService" ref="categoryService" /> <!-- 依赖的categoryService用上面和Hibernate整合时配置好的categoryService -->
-	</bean>
+	<context:annotation-config />
+	<context:component-scan base-package="com.greg.gmall.." />
 </beans>

@@ -1,6 +1,10 @@
+E:\Java\GMall\Gmall\src\main\java\com\greg\gmall\service\BaseService.java
+E:\Java\GMall\Gmall\src\main\java\com\greg\gmall\dao\imp\BaseDaoImp.java
+E:\Java\GMall\Gmall\src\main\java\com\greg\gmall\dao\BaseDao.java
 E:\Java\GMall\Gmall\src\main\java\com\greg\gmall\model\Category.java
 E:\Java\GMall\Gmall\src\main\java\com\greg\gmall\action\CategoryAction.java
 E:\Java\GMall\Gmall\src\main\java\com\greg\gmall\service\imp\CategoryServiceImp.java
 E:\Java\GMall\Gmall\src\main\java\com\greg\gmall\service\CategoryService.java
+E:\Java\GMall\Gmall\src\main\java\com\greg\gmall\service\imp\BaseServiceImp.java
 E:\Java\GMall\Gmall\src\main\java\com\greg\gmall\dao\CategoryDao.java
 E:\Java\GMall\Gmall\src\main\java\com\greg\gmall\dao\imp\CategoryDaoImp.java
