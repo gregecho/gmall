@@ -7,7 +7,7 @@
   </head>  
     
   <body>  
-    <a href="${pageContext.request.contextPath }/category_update.action?category.id=2&category.type=gga&category.hot=false">访问update</a>  
+    <a href="${pageContext.request.contextPath }/category_update.action?id=2&type=gga&hot=false">访问update</a>  
     <a href="category_save.action">访问save</a>  
     <a href="category_query.action">查询所有类别</a><br/>  
     <c:forEach items="${requestScope.categoryList }" var="category">  
