@@ -8,12 +8,11 @@ http://www.springframework.org/schema/context
 http://www.springframework.org/schema/context/spring-context-3.0.xsd">
  
 	<!-- Database Configuration -->
-	<import resource="config/database/spring/DataSource.xml" />
-	<import resource="config/database/spring/HibernateSessionFactory.xml" />
+	<import resource="config/database/spring/DataSource-Test.xml" />
+	<import resource="config/database/spring/HibernateSessionFactory-Test.xml" />
 
 	<!-- Beans Declaration -->
 	<import resource="com/greg/gmall/spring/CategoryBean.xml" />
-	<bean id="date" class="java.util.Date" />
 	<context:annotation-config />
 	<context:component-scan base-package="com.greg.gmall.." />
 </beans>

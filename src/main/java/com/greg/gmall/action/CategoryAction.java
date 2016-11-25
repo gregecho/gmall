@@ -32,7 +32,7 @@ public class CategoryAction extends BaseAction<Category> {
 	public String save() {
 		System.out.println("----save----");
 		System.out.println(categoryService);
-		//categoryService.save(category);
+		categoryService.save(category);
 		return "index";
 	}
 

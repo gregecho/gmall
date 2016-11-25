@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
@@ -31,6 +30,11 @@
 				<value>com/greg/gmall/hibernate/Category.hbm.xml</value>
 			</list>
 		</property>
+		<property name="packagesToScan">
+        <list>
+            <value>com.greg.gmall.model</value>
+        </list>
+    </property>
 
 	</bean>
 	<bean id="transactionManager"
@@ -44,7 +48,7 @@
 			<tx:method name="update*" propagation="REQUIRED" />
 			<tx:method name="delete*" propagation="REQUIRED" />
 			<!-- Do not add propagation="SUPPORTS". http://docs.spring.io/spring-framework/docs/4.2.x/spring-framework-reference/html/transaction.html -->
-			<tx:method name="*"/>
+			<tx:method name="*" />
 		</tx:attributes>
 	</tx:advice>
 	<aop:config>
