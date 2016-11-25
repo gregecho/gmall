@@ -1,1 +1,4 @@
 SSHTest.class
+com\greg\gmall\action\CategoryActionTest.class
+com\greg\gmall\service\CategoryServiceImpTest.class
+com\greg\gmall\dao\CategoryDaoTest.class

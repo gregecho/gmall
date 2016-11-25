@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
@@ -15,12 +16,13 @@
 		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
 
 		<property name="dataSource">
-			<ref bean="dataSource" />
+			<ref bean="dataSourceTest" />
 		</property>
 
 		<property name="hibernateProperties">
 			<props>
-				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.dialect">org.hibernate.dialect.H2Dialect</prop>
+				<prop key="hibernate.hbm2ddl.auto">create-drop</prop>
 				<prop key="hibernate.show_sql">true</prop>
 			</props>
 		</property>
@@ -31,29 +33,16 @@
 			</list>
 		</property>
 		<property name="packagesToScan">
-        <list>
-            <value>com.greg.gmall.model</value>
-        </list>
-    </property>
+			<list>
+				<value>com.greg.gmall.model</value>
+			</list>
+		</property>
 
 	</bean>
 	<bean id="transactionManager"
 		class="org.springframework.orm.hibernate5.HibernateTransactionManager">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
+	<tx:annotation-driven transaction-manager="transactionManager" />
 
-	<tx:advice id="advice" transaction-manager="transactionManager">
-		<tx:attributes>
-			<tx:method name="save*" propagation="REQUIRED" />
-			<tx:method name="update*" propagation="REQUIRED" />
-			<tx:method name="delete*" propagation="REQUIRED" />
-			<!-- Do not add propagation="SUPPORTS". http://docs.spring.io/spring-framework/docs/4.2.x/spring-framework-reference/html/transaction.html -->
-			<tx:method name="*" />
-		</tx:attributes>
-	</tx:advice>
-	<aop:config>
-		<aop:pointcut id="pointcut"
-			expression="execution(* com.greg.gmall.service.imp.*.*(..))" />
-		<aop:advisor advice-ref="advice" pointcut-ref="pointcut" />
-	</aop:config>
 </beans>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="0" name="SSHTest" time="0.183" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="com.greg.gmall.action.CategoryActionTest" time="0.457" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_91\jre\bin"/>
@@ -61,6 +61,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="SSHTest" name="hihernate" time="0.183"/>
-  <testcase classname="SSHTest" name="springIoc" time="0"/>
+  <testcase classname="com.greg.gmall.action.CategoryActionTest" name="test_save_category_with_success" time="0.457"/>
 </testsuite>

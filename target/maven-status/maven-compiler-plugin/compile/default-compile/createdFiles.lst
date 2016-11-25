@@ -1,10 +1,13 @@
 com\greg\gmall\dao\BaseDao.class
-com\greg\gmall\service\BaseService.class
 com\greg\gmall\service\CategoryService.class
-com\greg\gmall\dao\imp\BaseDaoImp.class
 com\greg\gmall\dao\CategoryDao.class
-com\greg\gmall\dao\imp\CategoryDaoImp.class
+com\greg\gmall\config\SpringRootConfig.class
+com\greg\gmall\action\BaseAction.class
 com\greg\gmall\service\imp\BaseServiceImp.class
 com\greg\gmall\service\imp\CategoryServiceImp.class
 com\greg\gmall\model\Category.class
+com\greg\gmall\service\BaseService.class
+com\greg\gmall\dao\imp\BaseDaoImp.class
+com\greg\gmall\dao\imp\CategoryDaoImp.class
+com\greg\gmall\config\H2DataSource.class
 com\greg\gmall\action\CategoryAction.class

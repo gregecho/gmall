@@ -1,5 +1,8 @@
 package com.greg.gmall.model;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Category implements java.io.Serializable {
 	/**
 	 * 
@@ -11,6 +14,12 @@ public class Category implements java.io.Serializable {
 	private Boolean hot;
 
 	public Category() {
+	}
+	
+	public Category(Integer id, String type, boolean hot) {
+		this.id = id;
+		this.type = type;
+		this.hot = hot;
 	}
 	
 	public Category(String type, boolean hot) {
